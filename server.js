@@ -5040,6 +5040,10 @@ cache(function(data, match, sendBadge, request) {
   var badgeData = getBadgeData('chat', data);
   badgeData.text[1] = 'on gitter';
   badgeData.colorscheme = 'brightgreen';
+  badgeData.links = [
+    'https://gitter.im/' + userRepo,
+    'https://gitter.im/'+ userRepo
+  ];
   if (darkBackgroundTemplates.some(function(t) { return t === badgeData.template; })) {
     badgeData.logo = badgeData.logo || logos['gitter-white'];
     badgeData.logoWidth = 9;
